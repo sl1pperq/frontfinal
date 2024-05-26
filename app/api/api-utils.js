@@ -37,7 +37,7 @@ export const getNormalizedGameDataById = async (url, id) => {
 
 export const getNormalizedGamesDataByCategory = async (url, category) => {
   try {
-    const data = await getData(`${url}?categories.name=${category}`)
+    const data = await getData(`${url}/categories`)
     if (!data.length) {
       throw new Error('Нет игр в категории')
     }

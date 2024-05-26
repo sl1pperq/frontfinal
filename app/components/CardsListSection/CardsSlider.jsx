@@ -48,15 +48,17 @@ export const CardsSlider = (props) => {
   return (
     <div className={`swiper ${Styles["slider"]}`}>
       <ul className={`swiper-wrapper ${Styles["slider-wrapper"]}`}>
-        {props.data.map((item, i) => {
-          return (
-            <li className={`swiper-slide ${Styles["slide"]}`} key={i}>
-              <Link href={`/games/${item.id}`}>
-                <Card {...item} />
-              </Link>
-            </li>
-          );
-        })}
+        {
+          props.data.map((item, i) => {
+            return (
+                <li className={`swiper-slide ${Styles["slide"]}`} key={i}>
+                  <Link href={`/games/${item.id}`}>
+                    <Card {...item} />
+                  </Link>
+                </li>
+            );
+          })
+        }
       </ul>
       <div className={`swiper-pagination ${Styles["pagination"]}`}></div>
     </div>
