@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://back.banjosurf.ru/api' // TODO: https://back.banjosurf.ru/api
+export const BASE_URL = 'http://127.0.0.1:3002/api'
 
 export const endpoints = {
   games: `${BASE_URL}/games`,
